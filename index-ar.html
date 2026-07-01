@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسن إسلام | مصمم إبداعي محترف</title>
+    <meta name="description" content="معرض أعمال حسن إسلام، مصمم إبداعي متخصص في العلامات التجارية، الموشن جرافيك، الإعلانات، والإنتاج المرئي بالذكاء الاصطناعي.">
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --body-font: 'Cairo', sans-serif;
+            --title-font: 'Cairo', sans-serif;
+        }
+        /* RTL Adjustments */
+        body { text-align: right; }
+        .nav-list { padding-right: 0; }
+        .hero-content { margin-left: auto; margin-right: 0; }
+        .hero-titles { gap: 0.8rem; }
+        .hero-bg::after { background: linear-gradient(to left, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.7) 40%, rgba(10, 10, 10, 0) 100%); }
+        .about-data { text-align: right; }
+        .skills-box { padding-right: 1.5rem; border-right: 2px solid var(--accent-color); border-left: none; }
+        .timeline { border-right: 2px solid var(--glass-border); border-left: none; padding-right: 2rem; padding-left: 0; }
+        .timeline-dot { right: -2.35rem; left: auto; }
+        .contact-info .info-item i { margin-left: 1rem; margin-right: 0; }
+        .btn-link i { margin-right: 0.5rem; margin-left: 0; transform: rotate(180deg); }
+        .footer-social .social-link { margin-left: 1rem; margin-right: 0; }
+        
+        @media screen and (max-width: 992px) {
+            .hero-content { margin: 0 auto; text-align: center; }
+            .hero-container { text-align: center; }
+        }
+        @media screen and (max-width: 768px) {
+            .nav-menu { right: auto; left: -100%; transition: left var(--transition-normal); }
+            .nav-menu.show-menu { left: 0; right: auto; }
+        }
+        @media screen and (max-width: 480px) {
+            .timeline { padding-right: 1rem; }
+            .timeline-dot { right: -1.35rem; }
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="#hero" class="logo">HE<span>.</span></a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active">الرئيسية</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">نبذة عني</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">المهارات</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">المشاريع</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">الخبرات</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">الخدمات</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">تواصل معي</a></li>
+                </ul>
+            </div>
+            <div class="nav-controls">
+                <a href="index.html" class="lang-toggle" aria-label="Switch to English" style="color: var(--title-color); font-size: 1.1rem; margin-left: 0.5rem; text-decoration: none; font-weight: 600; font-family: var(--title-font); transition: color var(--transition-fast);" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='var(--title-color)'">EN</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section" id="hero">
+            <div class="hero-bg">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content fade-up">
+                    <h2 class="hero-subtitle">مرحباً، أنا</h2>
+                    <h1 class="hero-title">حسن إسلام</h1>
+                    <div class="hero-titles">
+                        <span class="typewriter">مصمم إبداعي</span>
+                        <span class="dot">•</span>
+                        <span>مصمم هويات بصرية</span>
+                        <span class="dot">•</span>
+                        <span>مصمم موشن جرافيك</span>
+                    </div>
+                    <p class="hero-description">
+                        متخصص في تصميم العلامات التجارية، الموشن جرافيك، الإعلانات، والإنتاج المرئي المدعوم بالذكاء الاصطناعي. أصنع تجارب بصرية احترافية تحول الأفكار إلى علامات تجارية لا تُنسى وحملات تسويقية ناجحة.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">عرض المشاريع</a>
+                        <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-title-wrap fade-up">
+                    <h2 class="section-title">نبذة عني</h2>
+                    <span class="section-subtitle">مسيرتي المهنية</span>
+                </div>
+                <div class="about-container grid fade-up">
+                    <div class="about-image-wrapper">
+                        <!-- Profile photo -->
+                        <img src="img/profile.jpg" alt="حسن إسلام" style="width: 100%; height: auto; border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid var(--glass-border); display: block;">
+                        <div class="about-card">
+                            <div class="card-info">
+                                <h3>الموقع</h3>
+                                <p>أسيوط، مصر</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-data">
+                        <p class="about-description">
+                            أنا حسن إسلام، مصمم إبداعي شغوف ببناء هويات بصرية مؤثرة وتجارب إعلانية مميزة. خبرتي تشمل تصميم العلامات التجارية، الموشن جرافيك، تصاميم السوشيال ميديا، الإعلانات التجارية، والإنتاج الإبداعي بمساعدة الذكاء الاصطناعي. أجمع بين الإبداع والاستراتيجية والتقنيات الحديثة لتطوير صور تعزز من قوة العلامات التجارية وتزيد من التفاعل وتحقق قيمة ملموسة.
+                        </p>
+                        <p class="about-description">
+                            كل مشروع أقوم به مبني على تصميم مدروس، اهتمام بالتفاصيل، والتزام بتقديم حلول بصرية فاخرة وعصرية تترك انطباعاً لا ينسى.
+                        </p>
+                        <div class="about-info grid">
+                            <div class="info-box">
+                                <h3 class="info-title">اللغات</h3>
+                                <span class="info-subtitle">العربية (اللغة الأم)<br>الإنجليزية (مستوى احترافي)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-title-wrap fade-up">
+                    <h2 class="section-title">التخصصات والمهارات</h2>
+                    <span class="section-subtitle">خبراتي التقنية</span>
+                </div>
+                
+                <div class="skills-container grid">
+                    
+                    <!-- Creative Services -->
+                    <div class="skills-content glass-card fade-up">
+                        <h3 class="skills-title"><i class="fa-solid fa-wand-magic-sparkles"></i> الخدمات الإبداعية</h3>
+                        <div class="skills-box">
+                            <div class="skills-group">
+                                <span>تصميم الهويات البصرية</span>
+                                <span>تصميم الشعارات</span>
+                                <span>الموشن جرافيك</span>
+                                <span>تصاميم السوشيال ميديا</span>
+                                <span>تصميم الإعلانات</span>
+                            </div>
+                            <div class="skills-group">
+                                <span>إعلانات المنتجات</span>
+                                <span>الإدارة الإبداعية</span>
+                                <span>السرد البصري</span>
+                                <span>الإنتاج المرئي بالذكاء الاصطناعي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software -->
+                    <div class="skills-content glass-card fade-up" style="transition-delay: 100ms;">
+                        <h3 class="skills-title"><i class="fa-solid fa-laptop-code"></i> البرامج والأدوات</h3>
+                        <div class="skills-box">
+                            <div class="skills-group">
+                                <h4 class="skills-subtitle">Adobe CS</h4>
+                                <span>Photoshop</span>
+                                <span>Illustrator</span>
+                                <span>After Effects</span>
+                                <span>Premiere Pro</span>
+                            </div>
+                            <div class="skills-group">
+                                <h4 class="skills-subtitle">أدوات الذكاء الاصطناعي</h4>
+                                <span>Midjourney</span>
+                                <span>Stable Diffusion</span>
+                                <span>ChatGPT / Claude</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-title-wrap fade-up">
+                    <h2 class="section-title">أبرز المشاريع</h2>
+                    <span class="section-subtitle">أعمالي الحديثة الفاخرة</span>
+                </div>
+
+                <div class="projects-container grid">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card fade-up">
+                        <div class="project-img-wrapper">
+                            <img src="img/Logo Motion Reel 2025.jpg" alt="Logo Motion Reel 2025" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Logo Motion Reel 2025</h3>
+                            <p class="project-description">استعراض للهويات البصرية المتحركة، لإحياء الشعارات من خلال موشن جرافيك سينمائي وفاخر.</p>
+                            <a href="https://www.behance.net/gallery/232436101/Logo-Motion-Reel-2025-Animated-Brand-Identities" target="_blank" class="btn-link">عرض على Behance <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card fade-up" style="transition-delay: 100ms;">
+                        <div class="project-img-wrapper">
+                            <img src="img/Juice Ads Campaign.jpg" alt="Juice Ads Campaign" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Juice Ads Campaign</h3>
+                            <p class="project-description">هوية بصرية كاملة وحملة سوشيال ميديا لعلامة تجارية للعصائر الطازجة، تشمل الإعلانات والتصاميم التسويقية.</p>
+                            <a href="https://www.behance.net/gallery/160257979/Juice-Ads-Campaign" target="_blank" class="btn-link">عرض على Behance <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card fade-up" style="transition-delay: 200ms;">
+                        <div class="project-img-wrapper">
+                            <img src="img/Motion Graphic.jpg" alt="Motion Graphic" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Motion Graphic</h3>
+                            <p class="project-description">موشن جرافيك جذاب وديناميكي مصمم خصيصاً لحملات السوشيال ميديا والإعلانات التجارية.</p>
+                            <a href="https://www.behance.net/gallery/173491673/Motion-Graphic-" target="_blank" class="btn-link">عرض على Behance <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card fade-up" style="transition-delay: 300ms;">
+                        <div class="project-img-wrapper">
+                            <img src="img/Food Delivery Campaign.jpg" alt="Food Delivery Campaign" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Food Delivery Campaign</h3>
+                            <p class="project-description">حملة إعلانية مبتكرة للسوشيال ميديا ومواد ترويجية مصممة لخدمة توصيل طعام عصرية.</p>
+                            <a href="https://www.behance.net/gallery/244156813/-Food-Delivery-Campaign" target="_blank" class="btn-link">عرض على Behance <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass-card fade-up">
+                        <div class="project-img-wrapper">
+                            <img src="img/Luxury Dental Campaign.jpg" alt="Luxury Dental Campaign" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Luxury Dental Campaign</h3>
+                            <p class="project-description">حملة سوشيال ميديا فاخرة لعيادة أسنان راقية، تركز على الطباعة الأنيقة والصور عالية الجودة واتساق العلامة التجارية.</p>
+                            <a href="https://www.behance.net/gallery/247586163/Luxury-Dental-Social-Media-Campaign" target="_blank" class="btn-link">عرض على Behance <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass-card fade-up" style="transition-delay: 100ms;">
+                        <div class="project-img-wrapper">
+                            <img src="img/Marketing Video.jpg" alt="Marketing Video" style="width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; border-radius: var(--radius-sm);">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Marketing Video</h3>
+                            <p class="project-description">فيديو تسويقي وترويجي عالي الأداء مصمم لزيادة التفاعل وتقديم قيمة ملموسة للأعمال.</p>
+                            <a href="https://www.behance.net/gallery/147901493/Marketing-video" target="_blank" class="btn-link">عرض على Behance <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section" id="experience">
+            <div class="container">
+                <div class="section-title-wrap fade-up">
+                    <h2 class="section-title">الخبرة المهنية</h2>
+                    <span class="section-subtitle">مسيرتي</span>
+                </div>
+
+                <div class="experience-container fade-up">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-title">مصمم إبداعي <span>@ العمل الحر / وكالة</span></h3>
+                            <span class="timeline-date">الحاضر</span>
+                            <p class="timeline-text">قيادة المشاريع الإبداعية للعملاء، وتطوير استراتيجيات العلامات التجارية، وتنفيذ أصول الهوية البصرية والموشن جرافيك للعلامات التجارية الراقية.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-title">مصمم موشن جرافيك</h3>
+                            <span class="timeline-date">سابقاً</span>
+                            <p class="timeline-text">إنشاء رسوم متحركة حيوية وفيديوهات ترويجية وإعلانات تجارية لوسائل التواصل الاجتماعي.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="timeline-title">مصمم جرافيك أقدم</h3>
+                            <span class="timeline-date">سابقاً</span>
+                            <p class="timeline-text">إدارة تطوير المواد الإعلانية، تصميم التعبئة والتغليف، والمحتوى الرقمي للعلامات التجارية في مختلف القطاعات.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-title-wrap fade-up">
+                    <h2 class="section-title">الخدمات التي أقدمها</h2>
+                    <span class="section-subtitle">كيف يمكنني مساعدتك</span>
+                </div>
+
+                <div class="services-container grid">
+                    <div class="service-card glass-card fade-up">
+                        <i class="fa-solid fa-gem service-icon"></i>
+                        <h3 class="service-title">تصميم الهوية البصرية</h3>
+                        <p class="service-description">بناء أنظمة بصرية متكاملة تمثل قيم علامتك التجارية وتبرزها في السوق بقوة.</p>
+                    </div>
+
+                    <div class="service-card glass-card fade-up" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-film service-icon"></i>
+                        <h3 class="service-title">الموشن جرافيك</h3>
+                        <p class="service-description">رواية قصتك من خلال الرسوم المتحركة الجذابة والموشن جرافيك السينمائي الذي يجذب انتباه جمهورك.</p>
+                    </div>
+
+                    <div class="service-card glass-card fade-up" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-bullhorn service-icon"></i>
+                        <h3 class="service-title">تصميم الإعلانات والسوشيال ميديا</h3>
+                        <p class="service-description">تصميم محتوى رقمي يحقق التحويلات وإعلانات مخصصة تزيد من تفاعل العملاء وتزيد من المبيعات.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section-title-wrap fade-up">
+                    <h2 class="section-title">دعنا نعمل معاً</h2>
+                    <span class="section-subtitle">تواصل معي</span>
+                </div>
+
+                <div class="contact-container grid fade-up">
+                    <div class="contact-content">
+                        <h3 class="contact-title">هل لديك مشروع قادم؟</h3>
+                        <p class="contact-text">أنا متاح حالياً لمشاريع العمل الحر والشراكات الإبداعية. دعنا نناقش كيف يمكنني مساعدة علامتك التجارية في التميز.</p>
+                        
+                        <div class="contact-details" style="margin-bottom: 2rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: var(--text-color);">
+                                <i class="fa-solid fa-envelope" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                                <span>hasneslamhasn@gmail.com</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-color);">
+                                <i class="fa-solid fa-location-dot" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                                <span>أسيوط، مصر</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-social" style="display: flex; gap: 1rem;">
+                            <a href="https://www.behance.net/HassanEslam70" target="_blank" class="social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                            <a href="https://www.facebook.com/hassan.islam.352532" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=201033879807&text=" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact-form glass-card" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="البريد الإلكتروني" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="المشروع أو الرسالة" class="form-input" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        <p class="form-message" id="form-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="#" class="logo">HE<span>.</span></a>
+                    <p style="margin-top: 0.5rem; color: var(--text-color-light); font-size: 0.9rem;">
+                        تصاميم راقية لعلامات تجارية لا تُنسى.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.behance.net/HassanEslam70" target="_blank" class="social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                    <a href="https://www.facebook.com/hassan.islam.352532" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=201033879807&text=" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <p class="footer-copy">
+                &copy; <span id="year"></span> حسن إسلام. جميع الحقوق محفوظة.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll Top Button -->
+    <a href="#hero" class="scroll-top" id="scroll-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
